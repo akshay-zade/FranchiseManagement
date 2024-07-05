@@ -20,7 +20,7 @@ const Login = () => {
     }
 
   return (
-    <div class="min-vh-100 d-flex align-items-center">
+    <div class=" d-flex align-items-center">
     <div class="container py-5">
       <div class="card mx-auto shadow-sm" style={{ maxWidth: '28rem' }}>
         <div class="card-body p-4">

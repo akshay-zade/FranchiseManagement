@@ -23,7 +23,7 @@ const Login = () => {
     <div class="min-vh-100 d-flex align-items-center">
     <div class="container py-5">
       <div class="card mx-auto shadow-sm" style={{ maxWidth: '28rem' }}>
-        <div class="card-body p-5">
+        <div class="card-body p-4">
           <h1 class="card-title text-center mb-4">Login to Your Account</h1>
           {error && <p class="text-danger text-center mb-3">{error}</p>}
           <form onSubmit={signInForm}>

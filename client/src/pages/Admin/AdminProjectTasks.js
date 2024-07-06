@@ -39,8 +39,9 @@ const AdminProjectTasks = () => {
     <div class="container-fluid">
   <Navbar />
 
-  <div class="d-flex">
+  <div class="d-flex wrapper-home">
     <Sidebar />
+    <main class="flex-grow-1 p-4"></main>
     <div class="w-75 p-4">
       <div class="card shadow-lg">
         <div class="card-header bg-primary text-white">

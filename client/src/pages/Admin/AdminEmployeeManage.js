@@ -67,7 +67,7 @@ const AdminEmployeeManage = () => {
     <div class="min-vh-100 bg-light">
   <Navbar />
 
-  <div class="d-flex">
+  <div class="d-flex wrapper-home">
     <Sidebar />
 
     <main class="flex-grow-1 p-4">

@@ -19,7 +19,7 @@ const AdminEmployeeDetails = () => {
   
   <Navbar/>
 
-  <div class="d-flex">
+  <div class="d-flex wrapper-home">
     
     <Sidebar/>
 

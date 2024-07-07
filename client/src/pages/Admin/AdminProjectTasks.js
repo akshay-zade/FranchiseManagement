@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from '../../component/Admin/Navbar'
 import Sidebar from '../../component/Admin/Sidebar'
+import swal from 'sweetalert';
 
 const AdminProjectTasks = () => {
 
@@ -22,7 +23,6 @@ const AdminProjectTasks = () => {
       setTasks([
         { id: 1, name: 'Task 1', assignedTo: 'Employee 1', remark: 'Remark for task 1.', status: 'Pending' },
         { id: 2, name: 'Task 2', assignedTo: 'Employee 2', remark: 'Remark for task 2.', status: 'Pending' },
-        { id: 2, name: 'Task 3', assignedTo: 'Employee 2', remark: 'Remark for task 2.', status: 'Pending' },
       ]);
     }, []);
   
@@ -32,12 +32,12 @@ const AdminProjectTasks = () => {
   
     const handleSubmit = (e) => {
       e.preventDefault();
-      alert('Task created successfully!');
+      swal("Good job!", "Task created successfully!", "success")
       setShowModal(false);
     };
 
   return (
-    <div class="container-fluid">
+    <div className="container-fluid min-vh-100 bg-light">
   <Navbar />
 
   <div class="d-flex wrapper-home">

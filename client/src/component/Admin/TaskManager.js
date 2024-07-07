@@ -31,10 +31,10 @@ const TaskManager = () => {
   };
 
   return (
-    <div class="min-vh-100 bg-light">
+    <div className="min-vh-100 bg-light">
   <Navbar />
 
-  <div class="d-flex" style={{height: "100vh"}} >
+  <div className="d-flex" style={{height: "100vh"}} >
     <Sidebar />
 
     <main class="flex-grow-1 p-4">
@@ -53,7 +53,7 @@ const TaskManager = () => {
           <ul class="list-group list-group-flush">
             {projects.map((project) => (
               <li key={project.id} class="list-group-item d-flex justify-content-between align-items-center">
-                <a href="#" class="text-primary">
+                <a href="/adminProjectsTask" class="text-primary">
                   {project.name}
                 </a>
                 <select 

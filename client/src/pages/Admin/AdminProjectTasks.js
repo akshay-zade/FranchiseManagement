@@ -22,6 +22,7 @@ const AdminProjectTasks = () => {
       setTasks([
         { id: 1, name: 'Task 1', assignedTo: 'Employee 1', remark: 'Remark for task 1.', status: 'Pending' },
         { id: 2, name: 'Task 2', assignedTo: 'Employee 2', remark: 'Remark for task 2.', status: 'Pending' },
+        { id: 2, name: 'Task 3', assignedTo: 'Employee 2', remark: 'Remark for task 2.', status: 'Pending' },
       ]);
     }, []);
   
@@ -45,7 +46,7 @@ const AdminProjectTasks = () => {
     <div class="w-75 p-4">
       <div class="card shadow-lg">
         <div class="card-header bg-primary text-white">
-          Project Tasks - {projectId ? `Project ${projectId}` : 'Unknown Project'}
+          Project Tasks - {projectId ? `Project ${projectId}` : 'Task Management Project'}
         </div>
         <div class="card-body">
           <h5 class="mb-4">Tasks for {projectId ? `Project ${projectId}` : 'Unknown Project'}</h5>
@@ -72,7 +73,7 @@ const AdminProjectTasks = () => {
 
   {/* Modal */}
   {showModal && (
-    <div class="modal fade show d-block" tabindex="-1" role="dialog" style="background-color: rgba(0,0,0,0.5);">
+    <div class="modal fade show d-block" tabindex="-1" role="dialog" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }} >
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -101,7 +102,7 @@ const AdminProjectTasks = () => {
               </div>
             </div>
             <div class="modal-footer">
-              <button type="submit" class="btn btn-primary">Create Task</button>
+              <button type="submit" class="btn btn-primary"  >Create Task</button>
               <button type="button" class="btn btn-secondary" onClick={() => setShowModal(false)}>Cancel</button>
             </div>
           </form>

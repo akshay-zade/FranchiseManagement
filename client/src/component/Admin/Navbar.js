@@ -2,11 +2,11 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-  <div class="container">
-    <a class="navbar-brand text-gray-800 font-bold" href="#">Task Manager</a>
-    <div class="collapse navbar-collapse justify-content-end">
-      <button class="btn btn-danger font-bold rounded">
+    <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+  <div className="container">
+    <a className="navbar-brand text-gray-800 fs-4 fw-bold" href="#">Task Manager</a>
+    <div className="collapse navbar-collapse justify-content-end">
+      <button className="btn btn-danger font-bold  rounded btn-style">
         Logout
       </button>
     </div>

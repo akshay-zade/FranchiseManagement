@@ -11,6 +11,38 @@ const AdminEmployeeDetails = () => {
           project: 'Task Manager',
           inTime: '9:00am',
           outTime: '5:00pm'
+        },
+        {
+          name: 'Nutan',
+          email: 'Nutan01@gmail.com',
+          contact: '9222543210',
+          project: 'E-commernce',
+          inTime: '10:00am',
+          outTime: '6:00pm'
+        },
+        {
+          name: 'Mayuri',
+          email: 'Mayuri01@gmail.com',
+          contact: '8080543210',
+          project: 'Real Estate',
+          inTime: '11:00am',
+          outTime: '7:00pm'
+        },
+        {
+          name: 'Yash',
+          email: 'Yash01@gmail.com',
+          contact: '9876512345',
+          project: 'Derivary app',
+          inTime: '10:00am',
+          outTime: '5:00pm'
+        },
+        {
+          name: 'Ankita',
+          email: 'Ankita01@gmail.com',
+          contact: '9876543212',
+          project: 'Pizza app',
+          inTime: '8:00am',
+          outTime: '4:00pm'
         }
         
       ];

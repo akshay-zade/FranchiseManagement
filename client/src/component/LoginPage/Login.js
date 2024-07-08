@@ -1,6 +1,11 @@
 import React , {useState} from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
     
     const [form, setForm] = useState({
@@ -9,16 +14,19 @@ const Login = () => {
     });
     const [error, setError] = useState("");
   
-    const handleChange = (e) => {
-      const { name, value } = e.target;
-      setForm({...form, [name]: value });
-    }
+   
   
-    const signInForm = async (e) => {
+    const handleLogin = async (e) => {
       e.preventDefault();
+      if (email && password) {
+        localStorage.setItem('user', JSON.stringify({ email }));
+        localStorage.setItem('Password', JSON.stringify({ password }));
+        navigate('/');
+      } else {
+        alert('Please enter both username and password');
+      }
       
-    
-    }
+    };
 
   return (
     <div class=" d-flex align-items-center">
@@ -27,16 +35,17 @@ const Login = () => {
         <div class="card-body p-4">
           <h1 class="card-title text-center mb-4">Login to Your Account</h1>
           {error && <p class="text-danger text-center mb-3">{error}</p>}
-          <form onSubmit={signInForm}>
+          <form onSubmit={handleLogin}>
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
               <input
                 type="email"
                 name="email"
                 id="email"
+                value={email}
                 class="form-control"
                 placeholder="Enter your email"
-                onChange={handleChange}
+                onChange={(e) => setEmail(e.target.value)}
                 required
               />
             </div>
@@ -46,9 +55,10 @@ const Login = () => {
                 type="password"
                 name="password"
                 id="password"
+                value={password}
                 class="form-control"
                 placeholder="Enter your password"
-                onChange={handleChange}
+                onChange={(e) => setPassword(e.target.value)}
                 required
               />
             </div>
